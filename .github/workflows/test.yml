@@ -13,7 +13,7 @@ jobs:
       - uses: actions/add-to-project@RELEASE_VERSION
         with:
           project-url: https://github.com/lagamaY/myFirstLaravelProject.git
-#           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
-          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+#  
+          github-token: ${{ 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 }}
           labeled: needs-review, size/XL
           label-operator: AND
