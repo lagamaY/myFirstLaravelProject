@@ -13,6 +13,7 @@
 
         <div class="form-group">
             {{Form::label('', 'Product description')}}
+            {{Form::label('', 'Product descriptio1')}}
             {{Form::textarea('product_description', '', ['id'=> 'editor','placeholder' => 'Product description', 'class' => 'form-control'])}}
         </div>
 
