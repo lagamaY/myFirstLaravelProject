@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/add-to-project@RELEASE_VERSION
         with:
-          project-url: https://github.com/orgs/<orgName>/projects/<projectNumber>
+          project-url: https://github.com/lagamaY/myFirstLaravelProject.git
+#           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
           labeled: needs-review, size/XL
           label-operator: AND
