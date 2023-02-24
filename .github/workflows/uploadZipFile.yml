@@ -22,15 +22,4 @@ jobs:
         with:
           name: Release Artifact
           path: .
-      - name: Send Email
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: lagoma.business@gmail.com
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Nouvelle version de l'application disponible"
-          to: cjeanfabrice@gmail.com
-          body: "La nouvelle version de l'application est disponible en pièce jointe."
-          attachments: |
-            release.zip
+  
