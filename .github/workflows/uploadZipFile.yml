@@ -1,4 +1,3 @@
-name: Create Archive
 on:
   push:
     branches: [ main ]
@@ -23,16 +22,15 @@ jobs:
         with:
           name: Release Artifact
           path: .
-      - uses: actions/checkout@v2
-      - name: Build Release
-        run: |
-          # Commandes pour construire votre application et générer le fichier zip
       - name: Send Email
-        uses: jakejarvis/send-email-action@v1.5.0
+        uses: dawidd6/action-send-mail@v3
         with:
-          from: votre-email@gmail.com
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: lagoma.business@gmail.com
           password: ${{ secrets.EMAIL_PASSWORD }}
-          to: destinataire@gmail.com
           subject: "Nouvelle version de l'application disponible"
+          to: cjeanfabrice@gmail.com
           body: "La nouvelle version de l'application est disponible en pièce jointe."
-          attachments: release.zip
+          attachments: |
+            release.zip
