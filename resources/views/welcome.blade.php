@@ -26,3 +26,4 @@
 {!!Form::close()!!}
 
 <!-- Un commentaire test-->
+<!-- Pour utiliser GitHub Actions-->
