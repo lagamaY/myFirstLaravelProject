@@ -1,0 +1,25 @@
+name: Create Archive
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Archive Release
+        uses: thedoctor0/zip-release@0.7.1
+        with:
+          type: 'zip'
+          filename: 'release.zip'
+          exclusions: '.git /node_modules/ .editorconfig'
+      - name: Upload Release Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Release Artifact
+          path: release.zip
+      - name: Download Release Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: Release Artifact
+          path: .
