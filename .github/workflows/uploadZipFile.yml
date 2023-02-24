@@ -23,3 +23,16 @@ jobs:
         with:
           name: Release Artifact
           path: .
+      - uses: actions/checkout@v2
+      - name: Build Release
+        run: |
+          # Commandes pour construire votre application et générer le fichier zip
+      - name: Send Email
+        uses: jakejarvis/send-email-action@v1.5.0
+        with:
+          from: votre-email@gmail.com
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          to: destinataire@gmail.com
+          subject: "Nouvelle version de l'application disponible"
+          body: "La nouvelle version de l'application est disponible en pièce jointe."
+          attachments: release.zip
