@@ -24,3 +24,5 @@
         {{Form::submit('Add Product', ['class' => 'btn btn-primary'])}}
 
 {!!Form::close()!!}
+
+<!-- Un commentaire test-->
