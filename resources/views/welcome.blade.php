@@ -16,7 +16,7 @@
            
             {{Form::textarea('product_description', '', ['id'=> 'editor','placeholder' => 'Product description', 'class' => 'form-control'])}}
         </div>
-
+        <!-- Un commentaire pour tester mon action-->
         <div class="form-group">
             {{Form::file('product_image')}}
         </div>
